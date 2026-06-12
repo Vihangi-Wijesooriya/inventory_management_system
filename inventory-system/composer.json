@@ -1,0 +1,11 @@
+{
+    "name": "uok/inventory-system",
+    "description": "Web-Based Inventory Management System (CTEC 43018)",
+    "require": {
+        "php": ">=8.0",
+        "dompdf/dompdf": "^3.0"
+    },
+    "config": {
+        "optimize-autoloader": true
+    }
+}
