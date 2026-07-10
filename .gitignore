@@ -1,0 +1,3 @@
+# Local DB credentials & TLS cert — never commit these
+inventory/config/database.php
+inventory/config/ca.pem
