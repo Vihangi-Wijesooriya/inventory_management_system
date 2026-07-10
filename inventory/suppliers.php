@@ -1,0 +1,43 @@
+<?php
+require __DIR__ . '/includes/auth_check.php';
+$pageTitle = 'Suppliers';
+$pageScripts = ['crud.js', 'pages/suppliers.js'];
+require __DIR__ . '/includes/header.php';
+?>
+<div class="card">
+  <div class="card-body">
+    <div class="d-flex flex-wrap gap-2 justify-content-between mb-3">
+      <input id="searchInput" class="form-control" style="max-width:280px" placeholder="Search Suppliers...">
+      <button id="addBtn" class="btn btn-primary"><i class="bi bi-plus-lg me-1"></i>Add Supplier</button>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-hover" id="dataTable">
+        <thead><tr><th>ID</th><th>Name</th><th>Phone</th><th>Email</th><th class="text-end">Actions</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div class="d-flex justify-content-end" id="pagination"></div>
+  </div>
+</div>
+
+<div class="modal fade" id="crudModal" tabindex="-1">
+  <div class="modal-dialog">
+    <form class="modal-content" id="crudForm">
+      <div class="modal-header">
+        <h5 class="modal-title"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3"><label class="form-label">Name *</label><input name="name" class="form-control" required></div>
+        <div class="mb-3"><label class="form-label">Phone</label><input name="phone" class="form-control"></div>
+        <div class="mb-3"><label class="form-label">Email</label><input name="email" type="email" class="form-control"></div>
+        <div class="mb-3"><label class="form-label">Address</label><textarea name="address" class="form-control" rows="2"></textarea></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button type="submit" class="btn btn-primary" id="saveBtn">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<?php require __DIR__ . '/includes/footer.php'; ?>
