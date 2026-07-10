@@ -1,0 +1,7 @@
+RewriteEngine On
+
+# Route /api/* to the API front controller
+RewriteRule ^api/(.*)$ api/index.php [QSA,L]
+
+# Block direct access to config and includes
+RewriteRule ^(config|includes|database)/ - [F,L]

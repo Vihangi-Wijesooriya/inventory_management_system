@@ -1,0 +1,4 @@
+config/database.php
+config/ca.pem
+uploads/products/*
+!uploads/products/.gitkeep
